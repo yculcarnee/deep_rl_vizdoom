@@ -6,6 +6,7 @@ import ruamel.yaml
 from .logger import log
 from .coloring import red
 import numpy as np
+from ruamel.yaml import YAML
 
 import tensorflow as tf
 
@@ -46,7 +47,7 @@ def print_settings(settings, level=1, indent="    ", end_with_newline=True):
 
 
 def load_settings(default_settings_file, override_settings_files):
-    yaml = ruamel.yaml.YAML()
+    yaml = YAML()
     yaml.allow_duplicate_keys = False
     try:
         log("Loading common default settings from: " + DEFAULT_COMMON_SETTINGS_FILE)
