@@ -1,4 +1,4 @@
-DEFAULT_SETTINGS_LOCATION = "settings/defaults"
+DEFAULT_SETTINGS_LOCATION = "deep_rl_vizdoom/settings/defaults"
 DEFAULT_COMMON_SETTINGS_FILE = DEFAULT_SETTINGS_LOCATION + "/" + "common_defaults.yml"
 DEFAULT_DQN_SETTINGS_FILE = DEFAULT_SETTINGS_LOCATION + "/" + "dqn_defaults.yml"
 DEFAULT_A3C_SETTINGS_FILE = DEFAULT_SETTINGS_LOCATION + "/" + "a3c_defaults.yml"
