@@ -35,6 +35,8 @@ class VizdoomWrapper(object):
             doom.set_sound_enabled(True)
         if force_freedoom:
             doom.set_doom_game_path("freedoom2.wad")
+            
+        i=0
 
         doom.load_config(os.path.join(scenarios_path, str(config_file)))
         if hide_hood:
@@ -129,7 +131,8 @@ class VizdoomWrapper(object):
         return img
 
     def reset(self):
-        self.doom.new_episode()
+        self.doom.new_episode("episode" + str(i) + "_rec.lmp")
+        i+=1
         self._current_stacked_screen = np.zeros_like(self._current_stacked_screen)
         self._update_screen()
 
