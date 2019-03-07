@@ -26,7 +26,7 @@ class VizdoomWrapper(object):
                  use_misc=True,
                  misc_scale=None,
                  hide_hood=False,
-                 scenarios_path=os.path.join(vzd.__path__[0], "scenarios"),
+                 scenarios_path=os.path.join("ViZDoom/scenarios"),
                  seed=None,
                  sound=False,
                  **kwargs):
@@ -34,7 +34,7 @@ class VizdoomWrapper(object):
         if sound:
             doom.set_sound_enabled(True)
         if force_freedoom:
-            doom.set_doom_game_path(vzd.__path__[0] + "/freedoom2.wad")
+            doom.set_doom_game_path("freedoom2.wad")
 
         doom.load_config(os.path.join(scenarios_path, str(config_file)))
         if hide_hood:
